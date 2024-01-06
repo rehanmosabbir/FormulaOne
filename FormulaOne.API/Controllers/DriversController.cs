@@ -15,10 +15,8 @@ namespace FormulaOne.API.Controllers
     [ApiController]
     public class DriversController : BaseController
     {
-        private readonly IMediator _mediator;
-        public DriversController(IUnitOfWork unitOfWork, IMapper mapper,IMediator mediator) : base(unitOfWork, mapper)
+        public DriversController(IUnitOfWork unitOfWork, IMapper mapper,IMediator mediator) : base(unitOfWork, mapper,mediator)
         {
-            _mediator = mediator;
         }
 
         [HttpGet]
